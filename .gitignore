@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+
+# 视频演讲稿
+Draft*.txt

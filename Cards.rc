@@ -1,0 +1,41 @@
+#if defined(UNDER_CE)
+#include <winbase.h>
+#else
+#include <windows.h>
+#endif
+
+#define FILE_VERSION    1,3,0,0
+IDI_ICON1       ICON    "Heart.ico"
+
+VS_VERSION_INFO VERSIONINFO
+    FILEVERSION FILE_VERSION
+    FILEFLAGSMASK 0x3fL
+
+#ifdef _DEBUG
+    FILEFLAGS VS_FF_DEBUG
+#else
+    FILEFLAGS 0x0L
+#endif
+    FILEOS VOS__WINDOWS32
+    FILETYPE VFT_DLL
+    FILESUBTYPE 0x0L
+    BEGIN
+
+        BLOCK "StringFileInfo"
+        BEGIN
+            BLOCK "080404b0"        // Simplified Chinese, GBK
+            BEGIN
+                VALUE "CompanyName", "作者：Carburn Ashroom"
+                VALUE "ProductName", "24春晚卡牌魔术模拟器"
+                VALUE "FileDescription", "实践2024春晚第二个魔术"
+                VALUE "LegalCopyright", "开源、免费"
+                VALUE "OriginalFilename", "Cards.exe"
+                VALUE "ProductVersion", "2024.3.27"
+            END
+        END
+
+        BLOCK "VarFileInfo"
+        BEGIN
+            VALUE "Translation", 0x804, 1200        //Simplified Chinese, GB2312
+        END
+    END
